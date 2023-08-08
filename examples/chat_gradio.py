@@ -77,7 +77,7 @@ with gr.Blocks() as demo:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_name_or_path", type=str, help='mode name or path')
+    parser.add_argument("--model_name_or_path", type=str, default='/home/wac/johnson/project/model/FlagAlpha/Llama2-Chinese-7b-Chat',help='mode name or path')
     parser.add_argument("--is_4bit", action='store_true', help='use 4bit model')
     args = parser.parse_args()
     tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path,use_fast=False)
